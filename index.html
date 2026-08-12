@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trading Plan/Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="fontawesome-free-7.2.0-web/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="sidebarOverlay"></div>
+    <div class="container">
+      
+      <!-- This is the sideBar -->
+      <aside>
+        <div class="side_bar" id="sideBarMenu">
+          <div class="sideBarText">
+            <h1 id="tradingPlan">TradingPlan</h1>
+            <p id="tradingDashboard">Trading Dashboard</p>
+          </div>
+
+          <!-- SideBar items -->
+          <div class="sideBarItems">
+            <div class="icons active">
+              <span class="material-symbols-outlined">dashboard</span>
+              <p class="itemText">Dashboard</p>
+            </div>
+
+            <div class="icons">
+              <span class="material-symbols-outlined">lists</span>
+              <p class="itemText">Journal</p>
+            </div>
+
+            <div class="icons">
+              <span class="material-symbols-outlined">bar_chart</span>
+              <p class="itemText">Analysis</p>
+            </div>
+
+            <div class="icons">
+              <span class="material-symbols-outlined">calendar_month</span>
+              <p class="itemText">Calendar</p>
+            </div>
+
+            <div class="icons">
+              <span class="material-symbols-outlined">assignment_add</span>
+              <p class="itemText">My Plan</p>
+            </div>
+
+            <div class="icons">
+              <span class="material-symbols-outlined">gpp_maybe</span>
+              <p class="itemText">Risk Manager</p>
+            </div>
+
+            <div class="icons">
+              <span class="material-symbols-outlined">crisis_alert</span>
+              <p class="itemText">My Goals</p>
+            </div>
+
+            <div class="icons">
+              <span class="material-symbols-outlined">note_add</span>
+              <p class="itemText">Notes</p>
+            </div>
+
+            <div class="icons">
+              <span class="material-symbols-outlined">settings</span>
+              <p class="itemText">Settings</p>
+            </div>
+          </div>
+
+          <div class="darkandLight">
+            <span class="material-symbols-outlined">dark_mode</span>
+            <p class="darkMode">Dark Mode</p>
+          </div>
+
+          <div class="image_box">
+            <img
+              src="../image/profilePics.png"
+              id="img"
+              alt="userProfilePicture"
+            />
+            <div class="img_text">
+              <p class="name">Precious</p>
+              <p class="title">Trader</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main DashBoard Content -->
+      <main>
+        <div class="mainBox">
+           <button id="menuBtn">☰</button>
+          <header>
+            <div class="dashBoard">
+              <div class="iconText">
+                <h1 id="text">Dashboard</h1>
+                <p id="welcomeText">
+                  Welcome back, <span id="light_green" class="greenPriceColor">Precious!</span> Let's
+                  execute your plan.
+                </p>
+              </div>
+
+              <div class="dateandIcon">
+                <input type="date" id="date" value="date" />
+                <span id="divided">|</span>
+                <div class="notification">
+                  <span class="material-symbols-outlined notificationsIcon"
+                    >notifications</span
+                  >
+                  <span id="noti">10</span>
+                </div>
+              </div>
+            </div>
+          </header>
+
+
+          <!-- This is the trade Summary that includes Account balance etc...... -->
+          <div class="tradeSummary scroll-reveal">
+
+            <div class="box">
+              <div class="tradeSummaryIcons">
+                <span class="material-symbols-outlined account_Icons">account_balance_wallet</span>
+                <div class="textParent">
+                <p class="tradeSummaryText">Account Balance</p>
+                <h3 id="accountBalance" class="tradeSummaryPrice">100000</h3>
+                <p class="percent">...</p>
+                </div>               
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="tradeSummaryIcons">
+                <span class="material-symbols-outlined account_Icons">timeline</span>
+                <div class="textParent">
+                <p class="tradeSummaryText">Total P&L</p>
+                <h3 class="tradeSummaryPrice greenPriceColor">+$520.75</h3>
+                <p class="percent"> <span class="greenPriceColor">+5.21%</span> vs last 30 days</p>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="tradeSummaryIcons">
+                <span class="material-symbols-outlined win-rate">speed_3</span>
+                <div class="textParent">
+                <p class="tradeSummaryText">Win Rate</p>
+                <h3 class="tradeSummaryPrice" id="winRate">65.00%</h3>
+                <p class="percent"> <span class="blue">Win</span> / <span class="blue">Loss</span></p>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="tradeSummaryIcons">
+               <span class="material-symbols-outlined purple">safety_check_off</span>
+                <div class="textParent">
+                <p class="tradeSummaryText">Risk Per Trade</p>
+                <h3 class="tradeSummaryPrice">1.00%</h3>
+                <p class="percent purpleColor">of account</p>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="tradeSummaryIcons">
+               <span class="material-symbols-outlined dollar">paid</span>
+                <div class="textParent">
+                <p class="tradeSummaryText">Profit Factor</p>
+                <h3 class="tradeSummaryPrice">1.85</h3>
+                <p class="percent orangeColor">Good</p>
+                </div>                
+              </div>
+            </div>
+          </div>
+       
+
+           <div class="dashboardContent scroll-reveal">
+
+  <div class="lastSection">
+
+    <!-- BTC/USDT Live Chart -->
+    <div class="lastSectionBox">
+      <div class="equity">
+        <h4 id="btcUsdtChart">BTC/USDT Live Chart</h4>
+
+        <div id="btcChart">         
+  <div class="tradingview-widget-container" style="height:100%;width:100%">   
+    <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+    {
+      "allow_symbol_change": true,
+      "calendar": false,
+      "details": false,
+      "hide_side_toolbar": true,
+      "hide_top_toolbar": false,
+      "hide_legend": false,
+      "hide_volume": false,
+      "hotlist": false,
+      "interval": "D",
+      "locale": "en",
+      "save_image": true,
+      "style": "1",
+      "symbol": "BINANCE:BTCUSDT",
+      "theme": "dark",
+      "timezone": "Etc/UTC",
+      "backgroundColor": "#0F0F0F",
+      "gridColor": "rgba(242, 242, 242, 0.06)",
+      "watchlist": [],
+      "withdateranges": false,
+      "compareSymbols": [],
+      "studies": [],
+      "autosize": true
+    }
+    </script>
+      </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Trade Box -->
+    <div class="lastSectionBox">
+
+      <div class="recentTrades">
+        <h4 id="recentTradesText">Recent Trade</h4>
+        <button id="addTradesBtn">&plus; Add Trade</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  
+             
+           <!-- RIGHT: Summary -->
+          <div class="todaySummary scroll-reveal">
+
+          <div class="todaySummaryBox">
+
+            <div class="todaySummaryIcon">
+             <span class="material-symbols-outlined summaryIcon">date_range</span> 
+             <h4 class="summaryText">Today's Summary</h4>
+            </div>
+
+            <div class="tradeJournal">
+              <p class="tradeJournalText">P&L Today</p>
+              <p class="tradeJournalText" id="todayPnL">+$130.50</p>
+                 </div>
+
+           <div class="tradeJournal">
+              <p class="tradeJournalText">Trades</p>
+              <p class="tradeJournalText" id="todayTrade">2</p>
+                 </div>
+
+                 <div class="tradeJournal">
+              <p class="tradeJournalText">Win Rate</p>
+              <p class="tradeJournalText">100%</p>
+                    </div>
+
+                  <div class="tradeJournal">  
+              <p class="tradeJournalText">Best Trades</p>
+              <p class="tradeJournalText" id="bestTrade">+$90.00</p>
+              </div>
+           
+                    <div class="tradeJournal">  
+              <p class="tradeJournalText">Worst Trades</p>
+              <p class="tradeJournalText" id="worstTrade">+$40.50</p>
+              </div>
+          </div>
+
+          <!-- Risk OverView -->
+          <div class="todaySummaryBox riskOverview">
+
+          <div class="todaySummaryIcon">
+            <span class="material-symbols-outlined">toc</span>
+             <h4 class="summaryText">Risk Overview</h4>
+            </div>
+
+             <div class="circleParent">
+
+           <div class="percentCircle">
+            <h5 id="percent">1.00%</h5>
+            <h5 id="riskReward">1:2</h5>
+            <p id="riskUsed">Risk Used</p> 
+           </div>
+            
+           <div class="riskOverText">           
+           <span id="dot"></span>
+          <p class="riskText used">Used</p>
+           <p class="riskText">1.00%</p>       
+           </div>          
+             </div>   
+            </div>
+
+          <div class="todaySummaryBox">
+             <div class="todaySummaryIcon tradingPlan">
+            <span class="material-symbols-outlined">book_4</span>
+            <h4 class="summaryText">My Trading Plan / Rules</h4>
+             </div>
+             
+         <div class="tradingPlanList">
+          <ul>
+            <li>Risk 1% of account per trade</li>
+            <li>Minimum Risk:Reward 1:2</li>
+            <li>Only take high probability setups</li>
+            <li>Let winners run</li>
+            <li>Rewiew and journal trade</li>
+          </ul>
+         </div>
+          </div>
+               </div>
+      
+        </div>
+     <!-- dashDiv -->
+   
+    
+
+    </main>
+    </div>
+    <script src="../js/dashboard.js"></script>
+  </body>
+</html>
