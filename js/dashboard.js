@@ -66,7 +66,21 @@ darkAndLight.addEventListener("click", () => {
   } else {
     document.getElementsByClassName("darkMode")[0].textContent = "Dark Mode";
   }
+
+  if(document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "darkSaved")
+  } else {
+    localStorage.setItem("theme", "lightSaved")
+  }
 });
+
+const savedTheme = localStorage.getItem("theme")
+
+if(savedTheme === "darkSaved") {
+  document.body.classList.add("dark")
+} else {
+  document.body.classList.remove("dark")
+}
 
 //  Notification Icon.
 
