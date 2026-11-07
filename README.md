@@ -26,4 +26,4 @@ A personal trading journal dashboard to log trades, track daily performance, and
 2. Open `index.html` in your browser
 
 ## Author
-oeprxc
+Precious Emmanuel 
