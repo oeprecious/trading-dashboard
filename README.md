@@ -22,7 +22,7 @@ A personal trading journal dashboard to log trades, track daily performance, and
 - LocalStorage API
 
 ## How to Run
-1. Clone: `git clone https://github.com/oeprxc/trading-dashboard.git`
+1. Clone: `git clone https://github.com/oeprecious/trading-dashboard.git`
 2. Open `index.html` in your browser
 
 ## Author
